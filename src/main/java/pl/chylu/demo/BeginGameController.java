@@ -3,12 +3,12 @@ package pl.chylu.demo;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class HelloController {
+public class BeginGameController {
     @FXML
-    private Label welcomeText;
+    private Label beginText;
 
     @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Kamilcia kocham Cię bardzo <3 !!");
+    protected void beginGameButton() {
+        beginText.setText("Zatem zacznijmy grę mój mały poszukiwaczu przygód!");
     }
 }

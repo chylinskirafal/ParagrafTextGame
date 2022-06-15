@@ -4,15 +4,17 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import pl.chylu.util.SystemUtil;
 
 import java.io.IOException;
 
-public class HelloApplication extends Application {
+public class PragrafApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("main-view.fxml"));
+        SystemUtil su = new SystemUtil();
+        FXMLLoader fxmlLoader = new FXMLLoader(PragrafApplication.class.getResource("main-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 720, 540);
-        stage.setTitle();
+        stage.setTitle(su.getTitle());
         stage.setScene(scene);
         stage.show();
     }
