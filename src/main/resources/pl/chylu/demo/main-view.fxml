@@ -1,16 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="pl.chylu.demo.BeginGameController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-    <Label fx:id="beginText"/>
-    <Button text="Zaczynajmy!" onAction="#beginGameButton"/>
-</VBox>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="615.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="CENTER" layoutX="1.0" layoutY="6.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="500.0" prefWidth="615.0" spacing="30.0">
+         <children>
+            <Label fx:id="mainLabel" text="Wybierz przygodę">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="firstAdventureButton" mnemonicParsing="false" prefHeight="63.0" prefWidth="215.0" text="Patrol w Yordee" textAlignment="CENTER">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="secondAdventureButton" mnemonicParsing="false" prefHeight="63.0" prefWidth="215.0" text="Sarmatia" textAlignment="CENTER">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="firstAdventure" mnemonicParsing="false" prefHeight="63.0" prefWidth="215.0" text="Sąsiedzi Lonesbury" textAlignment="CENTER">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="exitButton" alignment="CENTER" mnemonicParsing="false" prefHeight="52.0" prefWidth="98.0" text="Wyjdź" textAlignment="CENTER">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+         <opaqueInsets>
+            <Insets bottom="30.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="40.0" left="40.0" right="40.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
