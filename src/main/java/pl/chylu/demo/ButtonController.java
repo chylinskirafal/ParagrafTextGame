@@ -6,8 +6,8 @@ import javafx.fxml.FXML;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -28,7 +28,7 @@ public class ButtonController {
     Button secondAdventureButton;
 
     @FXML
-    private void secondPlot(ActionEvent event) {
+    private void secondPlot() {
 
         dialogNotExitPlot();
 
@@ -55,7 +55,8 @@ public class ButtonController {
         dialog.initModality(Modality.APPLICATION_MODAL);
         dialog.initOwner(ParagrafApplication.primaryStage);
 
-        Label label = new Label("Ta historia jest\njeszcze nie gotowa");
+        Text txt = new Text("Ta historia jest\njeszcze nie gotowa\n");
+        txt.setStyle("-fx-font-weight: bold");
 
         Button closeButoon = new Button("Rozumiem");
         closeButoon.setOnAction(new EventHandler<ActionEvent>() {
@@ -64,7 +65,7 @@ public class ButtonController {
                 dialog.close();
             }
         });
-        VBox dialogVbox = new VBox(label, closeButoon);
+        VBox dialogVbox = new VBox(txt, closeButoon);
         dialogVbox.setAlignment(Pos.CENTER);
 
 
