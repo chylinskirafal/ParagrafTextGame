@@ -7,8 +7,7 @@ import javafx.stage.Stage;
 import pl.chylu.util.SystemUtil;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
+import java.sql.*;
 
 public class PragrafApplication extends Application {
     @Override
@@ -23,18 +22,26 @@ public class PragrafApplication extends Application {
     }
 
     public static void main(String[] args) {
-        Connection connection;
-        PreparedStatement insert;
+        String SQL_SELECT = "SELECT * FROM plot";
+        try (Connection conn = DriverManager.getConnection(
+                "jdbc:mysql://127.0.0.1:3306/rpg", "root", "");
+             PreparedStatement preparedStatement = conn.prepareStatement(SQL_SELECT)) {
 
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            //connection = DriverManager.getConnection("localhost/id19106386_webtest","Chylu","testPassword123!");
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+
+                int id = resultSet.getInt("id");
+                int idplot = resultSet.getInt("idplot");
+                String text = resultSet.getString("plottxt");
+                int choisee = resultSet.getInt("choisee");
+            }
             System.out.println("baza dziala");
-        } catch (ClassNotFoundException ex) {
-            System.out.println("cos poszlo zle");
-        } /*catch (SQLException ex) {
-            System.out.println("cos poszlo zle 2");
-        }*/
+        } catch (SQLException e) {
+            System.err.format("SQL State: %s\n%s", e.getSQLState(), e.getMessage());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         launch();
     }
 }
