@@ -9,6 +9,6 @@ module pl.chylu.demo {
     requires eu.hansolo.tilesfx;
     requires java.sql;
 
-    opens pl.chylu.demo to javafx.fxml;
-    exports pl.chylu.demo;
+    opens pl.chylu to javafx.fxml;
+    exports pl.chylu;
 }

@@ -29,7 +29,8 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="7beada9e-7a27-4886-8c51-de51fd3cc545">
-      <console name="rpg@localhost" type="STANDARD" schema="" session="Main" />
+      <console name="rpg@localhost" type="STANDARD" schema="rpg" session="Pool"><![CDATA[INSERT INTO plot VALUES ('1', '1', 'jakiś tekst domyślny', '1')
+SELECT * FROM plot]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -45,7 +46,7 @@
     <retain-sticky-names value="false" />
   </component>
   <component name="DBNavigator.Project.FileConnectionMappingManager">
-    <mapping file-url="file://$APPLICATION_CONFIG_DIR$/consoles/db/67908913-9dc3-4282-ac05-29cd0502b755/console.sql" connection-id="virtual-mysql-connection" session-id="" current-schema="" />
+    <mapping file-url="file://$APPLICATION_CONFIG_DIR$/consoles/db/67908913-9dc3-4282-ac05-29cd0502b755/console.sql" connection-id="virtual-mysql-connection" session-id="MAIN" current-schema="" />
   </component>
   <component name="DBNavigator.Project.MethodExecutionManager">
     <method-browser />
@@ -66,7 +67,9 @@
     <diagnostics-history />
   </component>
   <component name="DBNavigator.Project.ScriptExecutionManager" clear-outputs="true">
-    <recently-used-interfaces />
+    <recently-used-interfaces>
+      <mapping database-type="MYSQL" interface-id="DEFAULT" />
+    </recently-used-interfaces>
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
