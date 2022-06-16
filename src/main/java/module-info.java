@@ -7,6 +7,7 @@ module pl.chylu.demo {
     requires com.dlsc.formsfx;
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
+    requires java.sql;
 
     opens pl.chylu.demo to javafx.fxml;
     exports pl.chylu.demo;

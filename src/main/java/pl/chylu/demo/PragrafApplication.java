@@ -7,6 +7,8 @@ import javafx.stage.Stage;
 import pl.chylu.util.SystemUtil;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 
 public class PragrafApplication extends Application {
     @Override
@@ -21,6 +23,18 @@ public class PragrafApplication extends Application {
     }
 
     public static void main(String[] args) {
+        Connection connection;
+        PreparedStatement insert;
+
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //connection = DriverManager.getConnection("localhost/id19106386_webtest","Chylu","testPassword123!");
+            System.out.println("baza dziala");
+        } catch (ClassNotFoundException ex) {
+            System.out.println("cos poszlo zle");
+        } /*catch (SQLException ex) {
+            System.out.println("cos poszlo zle 2");
+        }*/
         launch();
     }
 }

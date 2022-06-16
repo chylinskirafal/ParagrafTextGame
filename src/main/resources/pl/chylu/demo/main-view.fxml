@@ -14,7 +14,7 @@
          <children>
             <Label fx:id="mainLabel" text="Wybierz przygodę">
                <font>
-                  <Font name="Arial" size="20.0" />
+                  <Font name="Arial" size="50.0" />
                </font>
             </Label>
             <Button fx:id="firstAdventureButton" mnemonicParsing="false" prefHeight="63.0" prefWidth="215.0" text="Patrol w Yordee" textAlignment="CENTER">
