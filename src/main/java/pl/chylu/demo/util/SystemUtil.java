@@ -1,4 +1,4 @@
-package pl.chylu.util;
+package pl.chylu.demo.util;
 
 public class SystemUtil {
     private String title = "Polskie Gry Paragrafowe!";

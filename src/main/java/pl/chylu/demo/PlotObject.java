@@ -1,4 +1,4 @@
-package pl.chylu;
+package pl.chylu.demo;
 
 public class PlotObject {
     private int id;

@@ -7,8 +7,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="615.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="615.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.chylu.demo.ButtonController">
    <children>
       <VBox alignment="CENTER" layoutX="1.0" layoutY="6.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="500.0" prefWidth="615.0" spacing="30.0">
          <children>
@@ -17,26 +16,26 @@
                   <Font name="Arial" size="50.0" />
                </font>
             </Label>
-            <Button fx:id="firstAdventureButton" mnemonicParsing="false" prefHeight="63.0" prefWidth="215.0" text="Patrol w Yordee" textAlignment="CENTER">
+            <Button fx:id="firstAdventureButton" mnemonicParsing="false" onAction="#firstPlot" prefHeight="63.0" prefWidth="215.0" text="Patrol w Yordee" textAlignment="CENTER">
                <font>
                   <Font name="Arial" size="20.0" />
                </font>
             </Button>
-            <Button fx:id="secondAdventureButton" mnemonicParsing="false" prefHeight="63.0" prefWidth="215.0" text="Sarmatia" textAlignment="CENTER">
+            <Button fx:id="secondAdventureButton" mnemonicParsing="false" onAction="#secondPlot" prefHeight="63.0" prefWidth="215.0" text="Sarmatia" textAlignment="CENTER">
                <font>
                   <Font name="Arial" size="20.0" />
                </font>
             </Button>
-            <Button fx:id="firstAdventure" mnemonicParsing="false" prefHeight="63.0" prefWidth="215.0" text="Sąsiedzi Lonesbury" textAlignment="CENTER">
+            <Button fx:id="treeAdventureButton" mnemonicParsing="false" onAction="#treePlot" prefHeight="63.0" prefWidth="215.0" text="Sąsiedzi Lonesbury" textAlignment="CENTER">
                <font>
                   <Font name="Arial" size="20.0" />
                </font>
             </Button>
-            <Button fx:id="exitButton" alignment="CENTER" mnemonicParsing="false" prefHeight="52.0" prefWidth="98.0" text="Wyjdź" textAlignment="CENTER">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Button>
+             <Button fx:id="exitButton" alignment="CENTER" mnemonicParsing="false" onAction="#closeOnExitButton" prefHeight="52.0" prefWidth="98.0" text="Wyjdź" textAlignment="CENTER">
+                 <font>
+                     <Font size="20.0" />
+                 </font>
+             </Button>
          </children>
          <opaqueInsets>
             <Insets bottom="30.0" />
