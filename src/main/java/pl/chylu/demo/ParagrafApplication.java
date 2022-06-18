@@ -19,6 +19,7 @@ public class ParagrafApplication extends Application {
         
         scene = new Scene(fxmlLoader.load());
         scene2 = new Scene(fxmlLoaderPlot.load());
+
         primaryStage = stage;
         primaryStage.setTitle(su.getTitle());
         primaryStage.setScene(scene);

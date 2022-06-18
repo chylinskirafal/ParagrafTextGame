@@ -8,6 +8,7 @@ module pl.chylu.demo {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires java.sql;
+    requires lombok;
 
     opens pl.chylu.demo to javafx.fxml;
     exports pl.chylu.demo;

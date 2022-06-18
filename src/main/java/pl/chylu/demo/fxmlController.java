@@ -3,18 +3,17 @@ package pl.chylu.demo;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class fxmlController {
-    public String stringTxt = "value motherfucker";
+
     public fxmlController() {
         System.out.println("przyciski dzialaja");
     }
@@ -28,7 +27,7 @@ public class fxmlController {
     }
 
     private void setTxtInPlot() {
-        plotTxt.setText(stringTxt);
+        plotTxt.setText(PlotService.nextTxt());
     }
 
     @FXML
@@ -60,10 +59,11 @@ public class fxmlController {
 
     @FXML
     private void setNextButton(ActionEvent event) {
-        System.out.println("Klawisz dziala");
+        setTxtInPlot();
     }
+
     @FXML
-    Label plotTxt;
+    Text plotTxt;
 
     private void dialogNotExitPlot() {
         final Stage dialog = new Stage();

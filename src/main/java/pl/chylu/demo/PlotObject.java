@@ -1,6 +1,12 @@
 package pl.chylu.demo;
 
+import lombok.Getter;
+import lombok.Setter;
+
 public class PlotObject {
+
+    @Getter
+    @Setter
     private int id;
     private int idplot;
     private String plottxt;
@@ -13,25 +19,5 @@ public class PlotObject {
         this.plottxt = plottxt;
         this.choisee = choisee;
         this.choiseetxt = choiseetxt;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public int getIdplot() {
-        return idplot;
-    }
-
-    public String getPlottxt() {
-        return plottxt;
-    }
-
-    public int getChoisee() {
-        return choisee;
-    }
-
-    public String getChoiseetxt() {
-        return choiseetxt;
     }
 }
